@@ -1,7 +1,7 @@
-velikost = 15
+size = 15
 target_number = 48516
 
-array = [[0 for x in range(velikost)] for y in range(velikost)]
+array = [[0 for x in range(size)] for y in range(size)]
 
 avaiable_directions = ["R", "U", "L", "D"]
 
@@ -38,9 +38,9 @@ def switch_dir():
 def main():
     row_length = 0
 
-    sredina = (int(velikost/2), int(velikost/2))
-    array[sredina[0]][sredina[1]] = 1
-    spot = sredina
+    middle = (int(size/2), int(size/2))
+    array[middle[0]][middle[1]] = 1
+    spot = middle
     for x in range(100):
         if x%2 == 0:
             row_length+=1
