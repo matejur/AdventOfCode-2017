@@ -12,6 +12,8 @@ with open("input.txt", "r") as f:
             else:
                 row_numbers.append(int(number))
                 number = ""
+                
+        row_numbers.append(int(number))
 
         sestevek += max(row_numbers) - min(row_numbers)
 
