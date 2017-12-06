@@ -12,6 +12,8 @@ with open("input.txt", "r") as f:
             else:
                 row_numbers.append(int(number))
                 number = ""
+                
+        row_numbers.append(int(number))
 
         for number1 in row_numbers:
             for number2 in row_numbers:
