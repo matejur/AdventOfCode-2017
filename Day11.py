@@ -2,7 +2,7 @@ x = 0
 y = 0
 z = 0
 
-distances = []
+max_distance = 0
 
 with open("input.txt", "r") as f:
     for line in f:
@@ -27,6 +27,7 @@ with open("input.txt", "r") as f:
             y-=1
             x+=1
 
-        distances.append((abs(x) + abs(y) + abs(z))/2)
-
-print("Part 1: ",(abs(x) + abs(y) + abs(z))/2 - 1, " Part 2: ", max(distances))
+        if max_distance < (abs(x) + abs(y) + abs(z))/2:
+            max_distance = (abs(x) + abs(y) + abs(z))/2
+            
+print("Part 1: ",(abs(x) + abs(y) + abs(z))/2 - 1, " Part 2: ", max_distance)
