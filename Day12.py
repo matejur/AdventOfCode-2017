@@ -4,8 +4,7 @@ groups = 0
 
 class Program(object):
 
-    def __init__(self, index, connections, isConnected):
-        self.index = index
+    def __init__(self, connections, isConnected):
         self.connections = connections
         self.isConnected = isConnected
 
@@ -14,7 +13,7 @@ with open("input.txt", "r") as f:
     for line in f:
         line = line.strip("\n").split("<->")
         connections = [int(x) for x in line[1].split(", ")]
-        program = Program(line[0], connections, False)
+        program = Program(connections, False)
         programs.append(program)
 
 def update_children(parent):
